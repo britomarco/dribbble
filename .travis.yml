@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- '4'
+deploy:
+  provider: heroku
+  api_key:
+    secure: MI2KoX7UzcdxDIDkQ0Ta0g0zfQ3DjaafNFm5sPDkSi8qMK8iGSTLxFolfZrtM3yxy0TiaLngOCtk6yOjOM9uEAev+VeMKNYN5g3E9rWnufdAhr1HJpJbYIkDBHWHYWl6ZXk1M8os1yUno/pnwK8iqAAAMEkh/a6Xtibb+vvtPQP3/4MuOoSUNDMkj7wlkt+lKCEiF/DfW+SE8HLEXUmHmTGweKFRRKSSOPoqHo/IVdfIGY12cOv8cVsIkS3FRj22geXa/MMbLgo7N2b37oPvgy83Aw3YpDIffrQP3doiPPKqnkovi+PlQfA/p/YaRFXNc1CymDPu+68P7Wxi9k4QCZIYvEKihGPspjlNewfMW3hM0GDoVBjxLoG9fR/xzrSDgDUxvVrITUMgDpBDMc7DKI992HkMCti5Teg+aAmvTW6EdWT2GwpsT7SUmZBbfQ4w86MvppX3EqX03qlSgj5021bRzMMGpeDS2gh8BSshSwR8VwdJ1jgGu3SeaEv6n2BO11bqdOw4hTeYDC2JPjasE6HdNo2qqfB87TadMj4i0cyHA3J7LSSEDyaaf//dXEM51dzVEB4kq+eVdS55kDcIeiZV62yYYBqjkk8Rby1vHsQEQn8eRloPsAqim73Sbx+NTDtaYle22hUByICeyEwRmUOXmFyDVmnVtJAP3U/+LMY=
+  before_install:
+  - npm config set spin false
+  - npm install -g npm@^2
+  install:
+  - npm install
+  script:
+  - npm run test
+  run:
+  - webpack --progress
+  - npm run build
