@@ -19,6 +19,6 @@ Usar o comando
 
 npm start
 
-E acessar por umas dessas url's
+E acessar por uma dessas url's
 http://localhost:8080
 http://127.0.0.1:8080
