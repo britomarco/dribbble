@@ -3,9 +3,9 @@ Com React e Redux
 
 # Clone o repositorio
 
-git clone https://github.com/britomarco/dribbble-api.git 
+git clone https://github.com/britomarco/dribbble.git 
 
-cd dribbble-api
+cd dribbble
 Instalar dependências usando o comando
 npm install
 
